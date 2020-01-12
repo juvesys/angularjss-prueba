@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="pokemones">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<!-- Incluir Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+       <!-- Incluir Style -->
+       <link rel="stylesheet" href="css/style.css">
+		
+		<!-- Incluir AngularJS -->
+		<!--<script src="js/lib/angular.min.js"></script>-->
+       <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+
+       <script src="js/lib/angular-modal-service.min.js"></script>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.css">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.js"></script>
+
+
+       <link href="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-csp.css" rel="stylesheet">
+       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.1/ui-bootstrap-tpls.js"></script>
+
+
+
+
+
+
+       <script src="js/app.js"></script>
+       <script src="js/lib/modalConfirmService.js"></script>
+
+    </head>    
+    <body>
+
+    	<div class="container text-center" ng-controller="pokemonCtrl as pc">
+    		
+    		<h1>{{title}}</h1>
+         <table ng-table="tableParams" class="table" show-filter="false" >
+            <thead class="ng-hide">
+            <tr> <th>Sr No</th> <th>Bill</th> <th>Paid</th> </tr>
+            </thead>
+            <tr class="col-md-3" ng-repeat="pokemon in pokemones">
+               <td class="form-control text-center h150 cursor mb20" ng-click="pc.open(pokemon.name)">
+                  <div >
+                     <img ng-src="{{pokemon.src_img}}"  title="{{pokemon.name | uppercase}}">
+                     <p>{{pokemon.name | uppercase}}</p>
+
+                  </div>
+
+               </td>
+            </tr>
+         </table>
+
+         <p><strong>Page:</strong> {{tableParams.page()}}</p>
+         <!--<p><strong>Count per page:</strong> {{tableParams.count()}}</p>-->
+         <!--<table ng-table="tableParams" class="table table-condensed table-bordered table-striped">
+            <tr ng-repeat="row in $data">
+               <td data-title="'Name'">{{row.name}}</td>
+               <td data-title="'Age'">{{row.age}}</td>
+            </tr>
+         </table>-->
+
+
+    	</div>
+
+
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-sanitize.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-animate.js"></script>
+    </body>
+</html>

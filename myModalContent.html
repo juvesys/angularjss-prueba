@@ -1,0 +1,14 @@
+<div class="modal-header">
+   <h3 class="modal-title" id="modal-title">{{pc.name | uppercase }}</h3>
+</div>
+<div class="modal-body text-center" id="modal-body">
+   <img ng-src="{{pc.img}}"  title="{{pc.name | uppercase}}">
+   <h4>Habilidades:</h4>
+   <ul ng-repeat ="  habilidad in pc.habilidades" class="list-group">
+      <li class="list-group-item">{{habilidad.ability}}</li>
+   </ul>
+</div>
+<div class="modal-footer">
+   <button class="btn btn-danger" type="button" ng-click="pc.ok()">Cerrar</button>
+   <!--<button class="btn btn-warning" type="button" ng-click="pc.cancel()">Cancel</button>-->
+</div>

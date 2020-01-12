@@ -1,0 +1,23 @@
+.h150{
+    height: 150px !important;
+}
+.cursor{
+    cursor: pointer;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    top: 50px; left: 50px; bottom: 50px; right: 50px;
+    background: white;
+    z-index: 100;
+}
+.overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
